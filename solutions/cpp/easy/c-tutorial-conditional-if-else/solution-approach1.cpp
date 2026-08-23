@@ -7,6 +7,12 @@
 // Language    cpp
 // Status      Accepted
 // Submitted   2026-08-23, 08:16 p.m.
+// Technique   switch-case-mapping
+// Time        O(1)
+// Space       O(1)
+// Insight     The implementation maps integer inputs to specific string literals using a switch statement, defaulting to a catch-all case for any value greater than nine.
+// Interview   Before: "I would use a long chain of if-else statements to check the range of n." After: "Using a switch statement provides O(1) time complexity and improves readability for discrete integer mapping, while the default case correctly handles all inputs greater than 9 as required."
+// Pitfalls    (1) The code performs redundant input reading by calling getline followed by cin, which may cause unexpected behavior if the input stream is not handled correctly.  (2) The switch statement relies on hardcoded integer cases, which fails to account for non-positive integers if the problem constraints were to change.
 // ──────────────────────────────────────────────────
 
 #include <bits/stdc++.h>
