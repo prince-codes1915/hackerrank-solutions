@@ -7,6 +7,12 @@
 // Language    cpp
 // Status      Accepted
 // Submitted   2026-08-25, 12:51 a.m.
+// Technique   floating-point-arithmetic-rounding
+// Time        O(1)
+// Space       O(1)
+// Insight     The implementation calculates the total cost by applying percentage multipliers to the meal cost and uses the standard round function to determine the nearest integer.
+// Interview   Before: "How do I handle the rounding requirement for the total cost?" After: "Use the round function on the sum of the meal cost, tip, and tax, which results in O(1) time and space complexity."
+// Pitfalls    (1) Using integer division instead of floating-point division for percentages leads to precision loss.  (2) Failing to use 100.0 as a divisor causes the compiler to perform integer division, truncating the tip and tax values prematurely.
 // ──────────────────────────────────────────────────
 
 #include <bits/stdc++.h>
