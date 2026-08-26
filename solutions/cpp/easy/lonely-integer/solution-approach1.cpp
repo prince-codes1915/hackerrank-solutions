@@ -7,6 +7,12 @@
 // Language    cpp
 // Status      Accepted
 // Submitted   2026-08-26, 10:54 p.m.
+// Technique   bitwise-xor-accumulation
+// Time        O(n)
+// Space       O(1)
+// Insight     The bitwise XOR operation cancels out pairs of identical integers, leaving only the unique element because XOR is commutative and associative with the property that x XOR x equals zero.
+// Interview   Before: "I would use a hash map to count frequencies of each integer." After: "Using XOR is more efficient, achieving O(n) time and O(1) space, as it leverages the property that identical elements cancel out, which is perfect for finding the single unique integer in an array of pairs."
+// Pitfalls    (1) Assuming the XOR approach works if more than one element appears an odd number of times, which violates the problem guarantee that only one element is unique.  (2) Failing to initialize the accumulator to zero, which would result in an incorrect final value.
 // ──────────────────────────────────────────────────
 
 #include <bits/stdc++.h>
