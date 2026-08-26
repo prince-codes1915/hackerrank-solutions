@@ -7,6 +7,12 @@
 // Language    cpp
 // Status      Accepted
 // Submitted   2026-08-26, 11:25 p.m.
+// Technique   vector-of-vectors
+// Time        O(N + Q + total_elements)
+// Space       O(total_elements)
+// Insight     The implementation uses a vector of vectors to store variable-length integer sequences, allowing direct O(1) access to any element via nested indexing.
+// Interview   Before: "I would use a 2D array with fixed dimensions." After: "Using a vector of vectors is more efficient here because it handles variable-length rows dynamically, resulting in O(N + Q + total_elements) time complexity and O(total_elements) space complexity to store the input data."
+// Pitfalls    (1) Accessing indices i or j that exceed the bounds of the outer or inner vectors, violating the problem's implicit constraint that queries are valid.  (2) Confusing the number of arrays n with the number of queries q during the input reading phase.
 // ──────────────────────────────────────────────────
 
 #include <cmath>
