@@ -7,6 +7,12 @@
 // Language    cpp
 // Status      Accepted
 // Submitted   2026-08-28, 03:20 a.m.
+// Technique   for-loop-multiplication
+// Time        O(1)
+// Space       O(1)
+// Insight     The implementation iterates through the integer range [1, 10] to compute and print the product of the input n and the current loop index i.
+// Interview   Before: "I would use a while loop to print the multiples." After: "A for loop is more idiomatic here, providing O(1) time complexity since the loop runs exactly 10 times regardless of the input n."
+// Pitfalls    (1) The loop condition i <= 10 is critical; using i < 10 would incorrectly omit the tenth multiple.  (2) The loop must start at i = 1 to satisfy the requirement that 1 <= i <= 10.
 // ──────────────────────────────────────────────────
 
 #include <bits/stdc++.h>
