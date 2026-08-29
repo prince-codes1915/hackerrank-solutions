@@ -7,6 +7,12 @@
 // Language    cpp
 // Status      Accepted
 // Submitted   2026-08-29, 10:57 p.m.
+// Technique   reverse-index-iteration
+// Time        O(N)
+// Space       O(N)
+// Insight     The implementation stores input integers in a vector and iterates from the last index down to zero to print elements in reverse order.
+// Interview   Before: "I would use a stack to reverse the array." After: "Since we know the size N, we can store elements in a vector and iterate backwards in O(N) time and O(N) space, which is efficient for the given constraints."
+// Pitfalls    (1) The loop condition i >= 0 is critical; using i > 0 would incorrectly omit the first element of the array.  (2) The code performs redundant input reading by first parsing a string vector and then overwriting it with cin, which may cause issues if the input stream is exhausted.
 // ──────────────────────────────────────────────────
 
 #include <bits/stdc++.h>
