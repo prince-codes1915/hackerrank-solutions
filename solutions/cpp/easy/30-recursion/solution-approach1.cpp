@@ -7,6 +7,12 @@
 // Language    cpp
 // Status      Accepted
 // Submitted   2026-08-31, 10:50 p.m.
+// Technique   recursive-factorial-base-case
+// Time        O(n)
+// Space       O(n)
+// Insight     The function computes the factorial of n by recursively multiplying n with the result of factorial(n-1) until the base case n < 2 is reached.
+// Interview   Before: "How would you implement a factorial function using recursion?" After: "I implemented it by defining a base case for n < 2 returning 1, and a recursive step returning n * factorial(n-1), resulting in O(n) time and O(n) stack space complexity."
+// Pitfalls    (1) Failing to use recursion as required by the problem statement will result in a score of zero.  (2) Naming the function anything other than factorial or Factorial violates the problem constraints and results in a score of zero.  (3) The base case n < 2 correctly handles both 0 and 1, but the implementation assumes non-negative input as per the problem context.
 // ──────────────────────────────────────────────────
 
 #include <bits/stdc++.h>
