@@ -7,6 +7,12 @@
 // Language    cpp
 // Status      Accepted
 // Submitted   2026-09-01, 11:18 p.m.
+// Technique   bit-manipulation-modulo-division
+// Time        O(log n)
+// Space       O(1)
+// Insight     The algorithm iteratively extracts the least significant bit using modulo two and updates the maximum consecutive count whenever a one is encountered, resetting the current count upon reaching a zero.
+// Interview   Before: "I would convert the integer to a binary string first." After: "Actually, I can compute the maximum consecutive ones in O(log n) time and O(1) space by processing bits directly using modulo and division, which avoids extra memory allocation for string conversion."
+// Pitfalls    (1) Failing to reset the current count to zero when encountering a zero bit.  (2) Using an incorrect loop condition that terminates before processing the final bit.  (3) Neglecting to update the maximum count inside the conditional block when a one is found.
 // ──────────────────────────────────────────────────
 
 #include <bits/stdc++.h>
