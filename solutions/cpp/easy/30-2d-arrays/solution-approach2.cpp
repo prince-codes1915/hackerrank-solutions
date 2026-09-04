@@ -7,6 +7,12 @@
 // Language    cpp
 // Status      Accepted
 // Submitted   2026-09-04, 09:10 p.m.
+// Technique   nested-loop-hourglass-sum
+// Time        O(1)
+// Space       O(1)
+// Insight     The algorithm iterates through all possible top-left corners of a 3x3 hourglass within a fixed 6x6 grid, calculating the sum for each valid configuration to determine the global maximum.
+// Interview   Before: "I would iterate through the 6x6 grid and check every possible shape." After: "Since the grid size is fixed at 6x6, the solution runs in O(1) time and space by checking all 16 possible hourglass positions using nested loops constrained to indices 0 through 3."
+// Pitfalls    (1) Incorrect loop bounds for the hourglass center, which must stop at index 3 to prevent accessing indices beyond the 6x6 array boundary.  (2) Initializing the maximum sum variable to zero instead of a sufficiently small value like INT_MIN, which fails if all hourglass sums are negative.  (3) Miscalculating the hourglass pattern indices by failing to account for the specific row and column offsets required for the seven elements.
 // ──────────────────────────────────────────────────
 
 #include <bits/stdc++.h>
