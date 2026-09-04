@@ -7,6 +7,12 @@
 // Language    cpp
 // Status      Accepted
 // Submitted   2026-09-04, 11:48 p.m.
+// Technique   recursive-backtracking-subset-sum
+// Time        O(2^M) where M is the maximum base such…
+// Space       O(M) due to the recursion stack depth
+// Insight     The algorithm explores a binary decision tree where each natural number i is either included in the sum or excluded, terminating when the remaining target X reaches zero or the current power exceeds X.
+// Interview   Before: "How would you find all combinations of unique powers that sum to X?" After: "I used a recursive backtracking approach with O(2^M) time complexity, where M is the largest base such that M^N <= X, effectively branching on whether to include each integer in the sum."
+// Pitfalls    (1) Failing to handle the base case X == 0 correctly, which represents a successful combination found.  (2) Using floating-point pow(i, N) which may introduce precision issues for very large inputs, though acceptable within the given constraints.  (3) Neglecting the pruning condition pow(i, N) > X, which leads to unnecessary recursive calls and potential stack overflow.
 // ──────────────────────────────────────────────────
 
 #include <bits/stdc++.h>
