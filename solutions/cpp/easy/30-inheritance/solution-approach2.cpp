@@ -7,6 +7,12 @@
 // Language    cpp
 // Status      Accepted
 // Submitted   2026-09-04, 09:25 p.m.
+// Technique   inheritance-constructor-initialization-list
+// Time        O(N)
+// Space       O(N)
+// Insight     The Student class utilizes an initialization list to invoke the base Person constructor while storing the test scores vector to compute the average grade via conditional logic.
+// Interview   Before: "How do you pass parameters to a base class constructor in C++?" After: "You use an initialization list in the derived constructor, as shown here. The calculate method then iterates through the scores in O(N) time to determine the grade based on the specified ranges."
+// Pitfalls    (1) Failing to use the member initialization list to call the base class constructor results in a compilation error.  (2) Incorrectly calculating the average by using integer division before checking the grade ranges can lead to precision issues if not handled carefully.  (3) Assuming the test scores vector is empty without checking could lead to a division by zero error in the calculate method.
 // ──────────────────────────────────────────────────
 
 
