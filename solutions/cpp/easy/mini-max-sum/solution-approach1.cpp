@@ -7,6 +7,12 @@
 // Language    cpp
 // Status      Accepted
 // Submitted   2026-09-06, 03:24 a.m.
+// Technique   nested-loop-summation
+// Time        O(n^2)
+// Space       O(1)
+// Insight     The algorithm calculates the sum of all elements excluding one index at a time, tracking the global minimum and maximum of these partial sums.
+// Interview   Before: "I could sort the array and sum the first four and last four elements." After: "This O(n^2) approach iterates through each element to exclude it, ensuring we handle the 64-bit integer requirement to avoid overflow when summing four elements."
+// Pitfalls    (1) Failing to use a 64-bit integer type for the sum variable, which causes overflow given the problem constraints.  (2) Initializing the minimum sum variable to zero instead of a sufficiently large value like LLONG_MAX, leading to incorrect minimum results.
 // ──────────────────────────────────────────────────
 
 #include <bits/stdc++.h>
