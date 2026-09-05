@@ -7,6 +7,12 @@
 // Language    cpp
 // Status      Accepted
 // Submitted   2026-09-05, 03:49 p.m.
+// Technique   linear-scan-comparison
+// Time        O(1)
+// Space       O(1)
+// Insight     The implementation iterates through the fixed-size triplets once, incrementing the respective score counters based on the comparison of elements at each index.
+// Interview   Before: "I would use a hash map to store the counts for each person." After: "Since the input size is fixed at three, a simple linear scan with two integer counters is more efficient, resulting in O(1) time and space complexity."
+// Pitfalls    (1) Failing to handle the case where elements are equal, which requires no points to be awarded to either person.  (2) Returning the scores in the incorrect order, as the problem explicitly requires Alice's score first and Bob's second.
 // ──────────────────────────────────────────────────
 
 #include <bits/stdc++.h>
