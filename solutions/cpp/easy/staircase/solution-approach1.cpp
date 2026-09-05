@@ -7,6 +7,12 @@
 // Language    cpp
 // Status      Accepted
 // Submitted   2026-09-06, 02:54 a.m.
+// Technique   nested-loop-printing
+// Time        O(n^2)
+// Space       O(1)
+// Insight     The algorithm prints n lines where each line i contains n-i spaces followed by i hash symbols to achieve right-alignment.
+// Interview   Before: "How do I print a right-aligned staircase?" After: "I use two nested loops per row: one for spaces (n-i) and one for hashes (i). This results in O(n^2) time complexity, which is optimal for printing n lines of length n."
+// Pitfalls    (1) Incorrectly calculating the number of spaces as i instead of n-i, which would result in left-alignment.  (2) Using an incorrect loop boundary for the hash symbols, such as starting at 0 or ending at i-1, which would print the wrong number of characters per line.
 // ──────────────────────────────────────────────────
 
 #include <bits/stdc++.h>
