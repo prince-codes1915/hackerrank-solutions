@@ -7,6 +7,12 @@
 // Language    cpp
 // Status      Accepted
 // Submitted   2026-09-05, 04:32 p.m.
+// Technique   single-pass-diagonal-summation
+// Time        O(n)
+// Space       O(n^2)
+// Insight     The algorithm iterates through the matrix rows once, accumulating values from the primary diagonal at index [i][i] and the secondary diagonal at index [i][n-1-i] simultaneously.
+// Interview   Before: "I would iterate through the matrix twice to sum each diagonal separately." After: "I can compute both sums in a single O(n) pass by using the row index to calculate both diagonal column offsets, which is efficient for an n by n matrix."
+// Pitfalls    (1) Confusing the secondary diagonal index n-1-i with n-i, which would cause an out-of-bounds access on the first iteration.  (2) Failing to use the absolute value function, as the problem explicitly requires the absolute difference between the two sums.
 // ──────────────────────────────────────────────────
 
 #include <bits/stdc++.h>
