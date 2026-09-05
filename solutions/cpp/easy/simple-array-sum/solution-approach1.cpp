@@ -7,6 +7,12 @@
 // Language    cpp
 // Status      Accepted
 // Submitted   2026-09-05, 02:59 p.m.
+// Technique   range-based-for-loop-summation
+// Time        O(n)
+// Space       O(n)
+// Insight     The function iterates through the entire vector once, accumulating each integer element into a running sum variable initialized to zero.
+// Interview   Before: "I would use a manual index loop to sum the array." After: "A range-based for loop is cleaner and safer for this O(n) summation, ensuring we process all n elements provided in the input vector."
+// Pitfalls    (1) Integer overflow may occur if the sum of array elements exceeds the maximum value representable by a 32-bit signed integer.  (2) The split function assumes space-separated input, which may fail if the input format contains unexpected delimiters or multiple spaces.
 // ──────────────────────────────────────────────────
 
 #include <bits/stdc++.h>
