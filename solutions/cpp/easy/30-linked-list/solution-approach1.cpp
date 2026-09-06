@@ -7,6 +7,11 @@
 // Language    cpp
 // Status      Accepted
 // Submitted   2026-09-06, 11:33 p.m.
+// Technique   linear-traversal-tail-insertion
+// Time        O(n)
+// Space       O(1)
+// Insight     The function traverses the linked list until the last node is reached, then appends the new node to the tail, returning the original head pointer.
+// Pitfalls    (1) Failing to handle the empty list case where head is null, which would cause a null pointer dereference during traversal.  (2) Forgetting to return the original head pointer after appending the new node, which results in losing the reference to the start of the list.
 // ──────────────────────────────────────────────────
 
 
